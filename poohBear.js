@@ -9,7 +9,29 @@ let gopher = { character: "Gopher"}
 let kango = { character: "Kango" }
 let eeyore = { character: "Eeyore" }
 let heffalumps = {character: "Heffalumps" }
+let player = {
+  location: tigger
+}
 
+function north(){
+  player.location = player.location.north
+  console.log(`You are now at ${player.location.character}`)
+}
+
+function south() {
+  player.location = player.location.south
+  console.log(`You are now at ${player.location.character}`)
+}
+
+function east() {
+  player.location = player.location.east
+  console.log(`You are now at ${player.location.character}`)
+}
+
+function west() {
+  player.location = player.location.west
+  console.log(`You are now at ${player.location.character}`)
+}
 
 
 tigger.north = pooh
@@ -31,4 +53,6 @@ eeyore.south = kango
 rabbit.east = gopher
 rabbit.south = pooh.east
 
-console.log(eeyore.south)
+north()
+north()
+east()
